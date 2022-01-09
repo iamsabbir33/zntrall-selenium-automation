@@ -31,5 +31,4 @@ public class ContactsInfoData {
 	//Edit contact from the list
 	public static String editphone = "789456123";
 	public static String edittitle = "This is test";
-
 }
