@@ -27,7 +27,7 @@ import org.testng.annotations.Test;
 
 import normalUserInputData.UsersInfoData;
 
-public class Users extends UsersInfoData{
+public class Users {
 
 	public static String env = "Test";
 	public static String testSuiteName = "Test Suit 3 -- Users";
@@ -117,8 +117,8 @@ public class Users extends UsersInfoData{
 		WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password']")));
 		WebElement login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@novalidate='novalidate']//button[1]")));
 
-		username.sendKeys(super.getUser());
-		password.sendKeys(super.getPass());
+		username.sendKeys(UsersInfoData.user);
+		password.sendKeys(UsersInfoData.pass);
 
 		login.click();
 		WebElement loginAs = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Counsellors']")));
@@ -186,9 +186,9 @@ public class Users extends UsersInfoData{
 		//WebElement groupSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='save']")));
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='save']")));
 
-		FirstName.sendKeys(super.getFirstName());
-		LastName.sendKeys(super.getLastName());
-		emailId.sendKeys(super.getemailId());
+		FirstName.sendKeys(UsersInfoData.FirstName);
+		LastName.sendKeys(UsersInfoData.LastName);
+		emailId.sendKeys(UsersInfoData.emailId);
 		groupDrpDown.click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Hospice Registered Nurse')]"))).click();
 
@@ -223,9 +223,9 @@ public class Users extends UsersInfoData{
 		//WebElement groupSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='save']")));
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='save']")));
 
-		FirstName.sendKeys(super.getFirstName());
-		LastName.sendKeys(super.getLastName());
-		emailId.sendKeys(super.getemailId());
+		FirstName.sendKeys(UsersInfoData.FirstName);
+		LastName.sendKeys(UsersInfoData.LastName);
+		emailId.sendKeys(UsersInfoData.emailId);
 		save.click();
 		Thread.sleep(2000);
 
@@ -252,9 +252,9 @@ public class Users extends UsersInfoData{
 		//WebElement groupSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='save']")));
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='save']")));
 
-		FirstName.sendKeys(super.getinvalidFirstName());
-		LastName.sendKeys(super.getinvalidLastName());
-		emailId.sendKeys(super.getinvalidemailId());
+		FirstName.sendKeys(UsersInfoData.invalidFirstName);
+		LastName.sendKeys(UsersInfoData.invalidLastName);
+		emailId.sendKeys(UsersInfoData.invalidemailId);
 		groupDrpDown.click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Hospice Registered Nurse')]"))).click();
 
@@ -318,9 +318,9 @@ public class Users extends UsersInfoData{
 		//WebElement groupSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='save']")));
 		WebElement reset = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Reset']")));
 
-		FirstName.sendKeys(super.getFirstName());
-		LastName.sendKeys(super.getLastName());
-		emailId.sendKeys(super.getemailId());
+		FirstName.sendKeys(UsersInfoData.FirstName);
+		LastName.sendKeys(UsersInfoData.LastName);
+		emailId.sendKeys(UsersInfoData.emailId);
 		groupDrpDown.click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Hospice Registered Nurse')]"))).click();
 
@@ -386,10 +386,10 @@ public class Users extends UsersInfoData{
 
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='text']")));
-		search.sendKeys(super.getsearch());
+		search.sendKeys(UsersInfoData.search);
 
 		WebElement firstRow = driver.findElement(By.xpath("//tbody/tr[1]/td[3]"));
-		String expectedText = super.getsearch();
+		String expectedText = UsersInfoData.search;
 		String actualText = firstRow.getText();
 		Assert.assertEquals(actualText, expectedText);
 		Thread.sleep(3000);
