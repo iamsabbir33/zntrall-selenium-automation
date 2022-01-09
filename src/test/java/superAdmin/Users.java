@@ -129,8 +129,8 @@ public class Users extends UsersInfoData {
 		WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
 		WebElement login = driver.findElement(By.xpath("//form[@novalidate='novalidate']//button[1]"));
 
-		String user = super.getUser();
-		String pass = super.getPass();
+		String user = UsersInfoData.user;
+		String pass = UsersInfoData.pass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -240,7 +240,7 @@ public class Users extends UsersInfoData {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@data-app='true']/div/div/main[@data-booted='true']/div/div/div/div/div/div/div/div/div/div/div/div/div/input[1]")));
 
-		String searchUser = super.getsearchUser();
+		String searchUser = UsersInfoData.searchUser;
 		search.sendKeys(searchUser);
 		WebElement firstRow = driver.findElement(By.xpath("//table[1]/tbody[1]/tr[1]/td[1]"));	
 		String actualText = firstRow.getText();
@@ -573,11 +573,11 @@ public class Users extends UsersInfoData {
 	public void userGroup() throws InterruptedException {
 		checkUserList();
 
-		String name = super.getadmin();
-		String acronym = super.getacronym();
-		String viewTitle = super.getviewTitle();
-		String viewAcronym = super.getviewAcronym();
-		String desc = super.getdescription();
+		String name = UsersInfoData.admin;
+		String acronym = UsersInfoData.acronym;
+		String viewTitle = UsersInfoData.viewTitle;
+		String viewAcronym = UsersInfoData.viewAcronym;
+		String desc = UsersInfoData.description;
 
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		WebElement add = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//i[normalize-space()='add']")));
