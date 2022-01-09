@@ -27,7 +27,7 @@ import org.testng.annotations.Test;
 
 import normalUserInputData.LocationInfoData;
 
-public class Locations extends LocationInfoData {
+public class Locations  {
 	public static String env = "Test";
 	public static String testSuiteName = "Test Suit 4 -- Locations";
 
@@ -106,7 +106,7 @@ public class Locations extends LocationInfoData {
 		Thread.sleep(3000);
 	}
 
-	//login
+		//login
 
 	@Test(priority = 1)
 	public void loginUser() throws InterruptedException {
@@ -115,8 +115,8 @@ public class Locations extends LocationInfoData {
 		WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
 		WebElement login = driver.findElement(By.xpath("//form[@novalidate='novalidate']//button[1]"));
 
-		String user = super.getUser();
-		String pass = super.getPass();
+		String user = LocationInfoData.user;
+		String pass = LocationInfoData.pass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -155,10 +155,10 @@ public class Locations extends LocationInfoData {
 		locationList();
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-text-field__slot']//input[@type='text']")));
-		driver.findElement(By.xpath("//div[@class='v-text-field__slot']//input[@type='text']")).sendKeys(super.getsearchLocation());
+		driver.findElement(By.xpath("//div[@class='v-text-field__slot']//input[@type='text']")).sendKeys(LocationInfoData.searchLocation);
 
 		WebElement firstRow = driver.findElement(By.xpath("//tbody/tr[1]/td[1]"));
-		String expectedText = super.getsearchLocation();
+		String expectedText = LocationInfoData.searchLocation;
 		String actualText = firstRow.getText();
 		Assert.assertEquals(actualText, expectedText);
 		Thread.sleep(3000);
@@ -209,19 +209,19 @@ public class Locations extends LocationInfoData {
 
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Save']")));
 
-		locationName.sendKeys(super.getlocationName());
-		licenceNumber.sendKeys(super.getlicenceNumber());
-		capacity.sendKeys(super.getcapacity());
-		address.sendKeys(super.getaddress());
-		suiteUnit.sendKeys(super.getsuiteUnit());
-		city.sendKeys(super.getcity());
-		state.sendKeys(super.getstate());
-		zip.sendKeys(super.getzip());
-		phoneNumber.sendKeys(super.getphoneNumber());
+		locationName.sendKeys(LocationInfoData.locationName);
+		licenceNumber.sendKeys(LocationInfoData.licenceNumber);
+		capacity.sendKeys(LocationInfoData.capacity);
+		address.sendKeys(LocationInfoData.address);
+		suiteUnit.sendKeys(LocationInfoData.suiteUnit);
+		city.sendKeys(LocationInfoData.city);
+		state.sendKeys(LocationInfoData.state);
+		zip.sendKeys(LocationInfoData.zip);
+		phoneNumber.sendKeys(LocationInfoData.phoneNumber);
 		type.click();
 		//selectType.click();
-		email.sendKeys(super.getemail());
-		note.sendKeys(super.getnote());
+		email.sendKeys(LocationInfoData.email);
+		note.sendKeys(LocationInfoData.note);
 		save.click();
 		Thread.sleep(5000);
 
@@ -254,19 +254,19 @@ public class Locations extends LocationInfoData {
 
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Save']")));
 
-		locationName.sendKeys(super.getlocationName2());
-		licenceNumber.sendKeys(super.getlicenceNumber2());
-		capacity.sendKeys(super.getcapacity2());
-		address.sendKeys(super.getaddress2());
-		suiteUnit.sendKeys(super.getsuiteUnit2());
-		city.sendKeys(super.getcity2());
-		state.sendKeys(super.getstate2());
-		zip.sendKeys(super.getzip2());
-		phoneNumber.sendKeys(super.getphoneNumber2());
+		locationName.sendKeys(LocationInfoData.locationName2);
+		licenceNumber.sendKeys(LocationInfoData.licenceNumber2);
+		capacity.sendKeys(LocationInfoData.capacity2);
+		address.sendKeys(LocationInfoData.address2);
+		suiteUnit.sendKeys(LocationInfoData.suiteUnit2);
+		city.sendKeys(LocationInfoData.city2);
+		state.sendKeys(LocationInfoData.state2);
+		zip.sendKeys(LocationInfoData.zip2);
+		phoneNumber.sendKeys(LocationInfoData.phoneNumber2);
 		type.click();
 		//selectType.click();
-		email.sendKeys(super.getemail2());
-		note.sendKeys(super.getnote2());
+		email.sendKeys(LocationInfoData.email2);
+		note.sendKeys(LocationInfoData.note2);
 		save.isEnabled();
 		Thread.sleep(5000);
 
@@ -322,21 +322,21 @@ public class Locations extends LocationInfoData {
 
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Save']")));
 
-		locationName.sendKeys(super.getlocationName());
-		licenceNumber.sendKeys(super.getlicenceNumber());
-		capacity.sendKeys(super.getcapacity());
-		address.sendKeys(super.getaddress());
-		suiteUnit.sendKeys(super.getsuiteUnit());
-		city.sendKeys(super.getcity());
-		state.sendKeys(super.getstate());
-		zip.sendKeys(super.getzip());
-		phoneNumber.sendKeys(super.getphoneNumber3());
+		locationName.sendKeys(LocationInfoData.locationName);
+		licenceNumber.sendKeys(LocationInfoData.licenceNumber);
+		capacity.sendKeys(LocationInfoData.capacity);
+		address.sendKeys(LocationInfoData.address);
+		suiteUnit.sendKeys(LocationInfoData.suiteUnit);
+		city.sendKeys(LocationInfoData.city);
+		state.sendKeys(LocationInfoData.state);
+		zip.sendKeys(LocationInfoData.zip);
+		phoneNumber.sendKeys(LocationInfoData.phoneNumber3);
 		//type.click();
 		//Thread.sleep(1000);
 		//selectType.click();
 		//Thread.sleep(1000);
-		email.sendKeys(super.getmail3());
-		note.sendKeys(super.getnote());
+		email.sendKeys(LocationInfoData.mail3);
+		note.sendKeys(LocationInfoData.note);
 		save.isEnabled();
 		Thread.sleep(5000);
 
@@ -406,11 +406,11 @@ public class Locations extends LocationInfoData {
 		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
 		WebElement submit = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Submit']")));
 
-		FirstName.sendKeys(super.getpatientfirstName());
-		LastName.sendKeys(super.getpatientlastName());
-		ssn.sendKeys(super.getssn());
-		phoneNumber.sendKeys(super.getphone());
-		email.sendKeys(super.getpatientemail());
+		FirstName.sendKeys(LocationInfoData.patientfirstName);
+		LastName.sendKeys(LocationInfoData.patientlastName);
+		ssn.sendKeys(LocationInfoData.ssn);
+		phoneNumber.sendKeys(LocationInfoData.phone);
+		email.sendKeys(LocationInfoData.patientemail);
 		submit.click();
 		Thread.sleep(5000);
 
@@ -441,11 +441,11 @@ public class Locations extends LocationInfoData {
 		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
 		WebElement submit = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Submit']")));
 
-		FirstName.sendKeys(super.getpatientfirstName2());
-		LastName.sendKeys(super.getpatientlastName2());
-		ssn.sendKeys(super.getssn2());
-		phoneNumber.sendKeys(super.getphone2());
-		email.sendKeys(super.getpatientemail2());
+		FirstName.sendKeys(LocationInfoData.patientfirstName2);
+		LastName.sendKeys(LocationInfoData.patientlastName2);
+		ssn.sendKeys(LocationInfoData.ssn2);
+		phoneNumber.sendKeys(LocationInfoData.phone2);
+		email.sendKeys(LocationInfoData.patientemail2);
 
 		submit.isEnabled();
 		Thread.sleep(5000);
@@ -482,11 +482,11 @@ public class Locations extends LocationInfoData {
 		Thread.sleep(1000);
 
 		WebElement FirstName = driver.findElement(By.xpath("//input[@required='required']"));
-		FirstName.sendKeys(super.getcontactfirstName());
+		FirstName.sendKeys(LocationInfoData.contactfirstName);
 		WebElement phoneNumber = driver.findElement(By.xpath("//div[@role='document']//div[3]//div[1]//div[1]//div[2]//div[1]//div[1]//input[1]"));
-		phoneNumber.sendKeys(super.getcontactPhone());
+		phoneNumber.sendKeys(LocationInfoData.contactPhone);
 		WebElement email = driver.findElement(By.xpath("//input[@type='email']"));
-		email.sendKeys(super.getcontactEmail());
+		email.sendKeys(LocationInfoData.contactEmail);
 		WebElement save = driver.findElement(By.xpath("//span[normalize-space()='Save']"));
 
 		save.click();
@@ -496,7 +496,7 @@ public class Locations extends LocationInfoData {
 		contactButton.click();
 
 		WebElement firstRow = driver.findElement(By.xpath("//tbody/tr[1]/td[1]"));
-		String expectedText = super.getcontactfirstName();
+		String expectedText = LocationInfoData.contactfirstName;
 		String actualText = firstRow.getText();
 		Assert.assertEquals(actualText, expectedText);
 
@@ -529,11 +529,11 @@ public class Locations extends LocationInfoData {
 		Thread.sleep(1000);
 
 		WebElement FirstName = driver.findElement(By.xpath("//input[@required='required']"));
-		FirstName.sendKeys(super.getcontactfirstName2());
+		FirstName.sendKeys(LocationInfoData.contactfirstName2);
 		WebElement phoneNumber = driver.findElement(By.xpath("//div[@role='document']//div[3]//div[1]//div[1]//div[2]//div[1]//div[1]//input[1]"));
-		phoneNumber.sendKeys(super.getcontactPhone2());
+		phoneNumber.sendKeys(LocationInfoData.contactPhone2);
 		WebElement email = driver.findElement(By.xpath("//input[@type='email']"));
-		email.sendKeys(super.getcontactEmail2());
+		email.sendKeys(LocationInfoData.contactEmail2);
 		WebElement save = driver.findElement(By.xpath("//span[normalize-space()='Save']"));
 
 		save.isEnabled();
@@ -573,7 +573,7 @@ public class Locations extends LocationInfoData {
 			editLicenceNumber.sendKeys(Keys.BACK_SPACE);
 		}
 
-		editLicenceNumber.sendKeys(super.geteditLicenceNumber());
+		editLicenceNumber.sendKeys(LocationInfoData.editLicenceNumber);
 
 		WebElement editCapacity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[8]//div[1]//div[1]//div[2]//div[1]//div[1]//input[1]")));
 		editCapacity.clear();
@@ -582,7 +582,7 @@ public class Locations extends LocationInfoData {
 		while (!editCapacity.getAttribute("value").equals("")) {
 			editCapacity.sendKeys(Keys.BACK_SPACE);
 		}
-		editCapacity.sendKeys(super.geteditCapacity());
+		editCapacity.sendKeys(LocationInfoData.editCapacity);
 
 		WebElement update = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='update']")));
 		update.click();
