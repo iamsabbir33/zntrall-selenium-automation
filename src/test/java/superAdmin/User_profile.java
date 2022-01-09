@@ -143,8 +143,8 @@ public class User_profile extends User_profileInfoData {
 		WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
 		WebElement login = driver.findElement(By.xpath("//form[@novalidate='novalidate']//button[1]"));
 
-		String user = super.getUser();
-		String pass = super.getPass();
+		String user = User_profileInfoData.user;
+		String pass = User_profileInfoData.pass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -193,7 +193,7 @@ public class User_profile extends User_profileInfoData {
 			selectPhoneNumber.sendKeys(Keys.BACK_SPACE);
 		}
 
-		String addPhone = super.getPhone();
+		String addPhone = User_profileInfoData.addPhone;
 
 		selectPhoneNumber.sendKeys(addPhone);
 		Thread.sleep(1000);
@@ -303,12 +303,12 @@ public class User_profile extends User_profileInfoData {
 		Thread.sleep(2000);
 
 		WebElement newEmail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body//div[@data-app='true']//div[@role='document']//div//div//div//div[2]//div[1]//div[1]//div[1]//input[1]")));
-		String firstMail = super.getfirstMail();
+		String firstMail = User_profileInfoData.firstMail;
 		newEmail.sendKeys(firstMail);
 		Thread.sleep(1000);
 
 		WebElement confirmEmail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='document']//div[3]//div[1]//div[1]//div[1]//input[1]")));
-		String secondMail = super.getsecondMail();
+		String secondMail = User_profileInfoData.secondMail;
 		confirmEmail.sendKeys(secondMail);
 		Thread.sleep(1000);
 
@@ -363,12 +363,12 @@ public class User_profile extends User_profileInfoData {
 		userProfile();
 		Thread.sleep(2000);
 
-		String street = super.getstreetAddress();
-		String unitNo = super.getunit();
-		String zipNo = super.getzip();
-		String cityName = super.getcity();
-		String stateName = super.getstate();
-		String poBoxNo = super.getpoBox();
+		String street = User_profileInfoData.streetAddress;
+		String unitNo = User_profileInfoData.unit;
+		String zipNo = User_profileInfoData.zip;
+		String cityName = User_profileInfoData.city;
+		String stateName = User_profileInfoData.state;
+		String poBoxNo = User_profileInfoData.poBox;
 
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
@@ -452,8 +452,8 @@ public class User_profile extends User_profileInfoData {
 		userProfile();
 		Thread.sleep(2000);
 
-		String currPass = super.getcurrentPass();
-		String newPassword = super.getnewPass();
+		String currPass = User_profileInfoData.currentPass;
+		String newPassword = User_profileInfoData.newPass;
 
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
