@@ -124,8 +124,8 @@ public class Clients extends ClientsInfoData {
 		WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
 		WebElement login = driver.findElement(By.xpath("//form[@novalidate='novalidate']//button[1]"));
 
-		String user = super.getUser();
-		String pass = super.getPass();
+		String user = ClientsInfoData.user;
+		String pass = ClientsInfoData.pass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -299,8 +299,8 @@ public class Clients extends ClientsInfoData {
 	@Test(priority = 11)
 	public void addNewClientGroup() throws InterruptedException {
 
-		String clientGroupName = super.getName();
-		String clientGroupAcronym = super.getAcronym();
+		String clientGroupName = ClientsInfoData.name;
+		String clientGroupAcronym = ClientsInfoData.acronym;
 
 		checkClientList();
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
@@ -331,8 +331,8 @@ public class Clients extends ClientsInfoData {
 	@Test(priority = 12)
 	public void editClientGroup() throws InterruptedException {
 
-		String editClientGroupName = super.geteditName();
-		String editClientGroupAcronym = super.geteditAcronym();
+		String editClientGroupName = ClientsInfoData.editName;
+		String editClientGroupAcronym = ClientsInfoData.editAcronym;
 
 		checkClientList();
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
