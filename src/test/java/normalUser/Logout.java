@@ -25,7 +25,7 @@ import org.testng.annotations.Test;
 
 import normalUserInputData.LogoutInfoData;
 
-public class Logout extends LogoutInfoData{
+public class Logout {
 
 	public static String env = "Test";
 	public static String testSuiteName = "Test Suit 10 -- Logout";
@@ -112,8 +112,8 @@ public class Logout extends LogoutInfoData{
 		WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
 		WebElement login = driver.findElement(By.xpath("//form[@novalidate='novalidate']//button[1]"));
 
-		String user = super.getUser();
-		String pass = super.getPass();
+		String user = LogoutInfoData.user;
+		String pass = LogoutInfoData.pass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
