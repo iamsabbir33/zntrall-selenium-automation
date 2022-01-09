@@ -123,8 +123,8 @@ public class Login extends LoginInfoData{
 		WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password']")));
 		WebElement login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@novalidate='novalidate']//button[1]")));
 
-		String user = super.getUser();
-		String pass = super.getPass();
+		String user = LoginInfoData.user;
+		String pass = LoginInfoData.pass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -148,8 +148,8 @@ public class Login extends LoginInfoData{
 		WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password']")));
 		WebElement login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@novalidate='novalidate']//button[1]")));
 
-		String user = super.getinvalidUser();
-		String pass = super.getvalidPass();
+		String user = LoginInfoData.invalidUser;
+		String pass = LoginInfoData.validPass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -186,8 +186,8 @@ public class Login extends LoginInfoData{
 
 		WebElement checkbox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-input--selection-controls__ripple']")));
 
-		String user = super.getvalidUser();
-		String pass = super.getinvalidPass();
+		String user = LoginInfoData.validUser;
+		String pass = LoginInfoData.invalidPass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -226,8 +226,8 @@ public class Login extends LoginInfoData{
 		WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password']")));
 		WebElement login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@novalidate='novalidate']//button[1]")));
 
-		String user = super.getinvalidUserId();
-		String pass = super.getinvalidPassId();
+		String user = LoginInfoData.invalidUserId;
+		String pass = LoginInfoData.invalidPassId;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
