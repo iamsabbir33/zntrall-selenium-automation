@@ -27,7 +27,7 @@ import org.testng.annotations.Test;
 
 import normalUserInputData.DashboardInfoData;
 
-public class Dashboard extends DashboardInfoData {
+public class Dashboard  {
 
 	public static String env = "Test";
 	public static String testSuiteName = "Test Suit 8 -- Dashboard";
@@ -117,8 +117,8 @@ public class Dashboard extends DashboardInfoData {
 		WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
 		WebElement login = driver.findElement(By.xpath("//form[@novalidate='novalidate']//button[1]"));
 
-		String user = super.getUser();
-		String pass = super.getPass();
+		String user = DashboardInfoData.user;
+		String pass = DashboardInfoData.pass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -164,31 +164,31 @@ public class Dashboard extends DashboardInfoData {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
 		WebElement locationName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@data-app='true']/div[@role='document']/div/div/div/div/div/div/div/div/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]")));
-		locationName.sendKeys(super.getlocationName());
+		locationName.sendKeys(DashboardInfoData.locationName);
 		WebElement licenceNumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@data-app='true']/div[@role='document']/div/div/div/div/div/div/div/div/div/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]")));
-		licenceNumber.sendKeys(super.getlicenceNumber());
+		licenceNumber.sendKeys(DashboardInfoData.licenceNumber);
 		WebElement capacity = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@data-app='true']/div[@role='document']/div/div/div/div/div/div/div/div/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/input[1]")));
-		capacity.sendKeys(super.getcapacity());
+		capacity.sendKeys(DashboardInfoData.capacity);
 		WebElement address = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body//div[@data-app='true']//div[@role='document']//div//div//div//div//div//div//div[2]//div[1]//div[1]//div[2]//div[1]//div[1]//input[1]")));
-		address.sendKeys(super.getaddress());
+		address.sendKeys(DashboardInfoData.address);
 		WebElement suiteUnit = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body//div[@data-app='true']//div[@role='document']//div//div//div//div//div//div//div[2]//div[2]//div[1]//div[1]//div[1]//div[1]//input[1]")));
-		suiteUnit.sendKeys(super.getsuiteUnit());
+		suiteUnit.sendKeys(DashboardInfoData.suiteUnit);
 		WebElement city = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='document']//div[3]//div[1]//div[1]//div[2]//div[1]//div[1]//input[1]")));
-		city.sendKeys(super.getcity());
+		city.sendKeys(DashboardInfoData.city);
 		WebElement state = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='document']//div[3]//div[2]//div[1]//div[1]//div[1]//div[1]//input[1]")));
-		state.sendKeys(super.getstate());
+		state.sendKeys(DashboardInfoData.state);
 		WebElement zip = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@data-app='true']/div[@role='document']/div/div/div/div/div/div/div/div/div/div[3]/div[1]/div[1]/div[1]/div[1]/input[1]")));
-		zip.sendKeys(super.getzip());
+		zip.sendKeys(DashboardInfoData.zip);
 		WebElement phoneNumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]")));
-		phoneNumber.sendKeys(super.getphoneNumber());
+		phoneNumber.sendKeys(DashboardInfoData.phoneNumber);
 		WebElement type = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-input theme--light v-text-field v-text-field--is-booted v-select']//div[@class='v-select__selections']")));
 		type.click();
 		WebElement selectType = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Work')]")));
 		selectType.click();
 		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
-		email.sendKeys(super.getemail());
+		email.sendKeys(DashboardInfoData.email);
 		WebElement note = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]")));
-		note.sendKeys(super.getnote());
+		note.sendKeys(DashboardInfoData.note);
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Save']")));
 		save.click();
 		Thread.sleep(5000);
@@ -221,18 +221,18 @@ public class Dashboard extends DashboardInfoData {
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Save']")));
 
 		Thread.sleep(2000);
-		locationName.sendKeys(super.getlocationName2());
-		licenceNumber.sendKeys(super.getlicenceNumber2());
-		capacity.sendKeys(super.getcapacity2());
-		address.sendKeys(super.getaddress2());
-		suiteUnit.sendKeys(super.getsuiteUnit2());
-		city.sendKeys(super.getcity2());
-		state.sendKeys(super.getstate2());
-		zip.sendKeys(super.getzip2());
-		phoneNumber.sendKeys(super.getphoneNumber2());
+		locationName.sendKeys(DashboardInfoData.locationName2);
+		licenceNumber.sendKeys(DashboardInfoData.licenceNumber2);
+		capacity.sendKeys(DashboardInfoData.capacity2);
+		address.sendKeys(DashboardInfoData.address2);
+		suiteUnit.sendKeys(DashboardInfoData.suiteUnit2);
+		city.sendKeys(DashboardInfoData.city2);
+		state.sendKeys(DashboardInfoData.state2);
+		zip.sendKeys(DashboardInfoData.zip2);
+		phoneNumber.sendKeys(DashboardInfoData.phoneNumber2);
 		type.click();
-		email.sendKeys(super.getemail2());
-		note.sendKeys(super.getnote2());
+		email.sendKeys(DashboardInfoData.email2);
+		note.sendKeys(DashboardInfoData.note2);
 
 		//Location check
 		if(locationName.getText().isEmpty()) {
@@ -378,9 +378,9 @@ public class Dashboard extends DashboardInfoData {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
 
-		email.sendKeys(super.getvalidemail());
+		email.sendKeys(DashboardInfoData.validemail);
 		WebElement note = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]")));
-		note.sendKeys(super.getnote3());
+		note.sendKeys(DashboardInfoData.note3);
 
 		if(email.getAttribute("value").startsWith("@")){
 			WebElement invalidMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'E-mail must be valid')]")));
@@ -415,24 +415,24 @@ public class Dashboard extends DashboardInfoData {
 
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Submit']")));
 
-		prefix.sendKeys(super.getprefix());
-		firstName.sendKeys(super.getpatientfirstName());
-		lastName.sendKeys(super.getpatientlastName());
-		ssn.sendKeys(super.getssn());
-		dob.sendKeys(super.getdob());
+		prefix.sendKeys(DashboardInfoData.prefix);
+		firstName.sendKeys(DashboardInfoData.patientfirstName);
+		lastName.sendKeys(DashboardInfoData.patientlastName);
+		ssn.sendKeys(DashboardInfoData.ssn);
+		dob.sendKeys(DashboardInfoData.dob);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='OK']"))).click();
 		gender.click();
 		WebElement genderMale = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Male')]")));
 		genderMale.click();
-		phone.sendKeys(super.getphone());
+		phone.sendKeys(DashboardInfoData.phone);
 		type.click();
 		WebElement typeMobile = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-list-item__title'][normalize-space()='Mobile']")));
 		typeMobile.click();
-		email.sendKeys(super.getpatientemail());
+		email.sendKeys(DashboardInfoData.patientemail);
 		//location.click();
 		//WebElement selectLocation = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Test Location 2']")));
 		//selectLocation.click();
-		note.sendKeys(super.getpatientnote());
+		note.sendKeys(DashboardInfoData.patientnote);
 		save.click();
 		Thread.sleep(5000);
 
@@ -465,15 +465,15 @@ public class Dashboard extends DashboardInfoData {
 
 		WebElement save = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Submit']")));
 
-		prefix.sendKeys(super.getprefix2());
-		firstName.sendKeys(super.getpatientfirstName2());
-		lastName.sendKeys(super.getpatientlastName2());
-		ssn.sendKeys(super.getssn2());
-		dob.sendKeys(super.getdob2());
+		prefix.sendKeys(DashboardInfoData.prefix2);
+		firstName.sendKeys(DashboardInfoData.patientfirstName2);
+		lastName.sendKeys(DashboardInfoData.patientlastName2);
+		ssn.sendKeys(DashboardInfoData.ssn2);
+		dob.sendKeys(DashboardInfoData.dob2);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='OK']"))).click();
-		phone.sendKeys(super.getphone2());
-		email.sendKeys(super.getpatientemail2());
-		note.sendKeys(super.getpatientnote2());
+		phone.sendKeys(DashboardInfoData.phone2);
+		email.sendKeys(DashboardInfoData.patientemail2);
+		note.sendKeys(DashboardInfoData.patientnote2);
 
 
 		//prefix check
@@ -584,9 +584,9 @@ public class Dashboard extends DashboardInfoData {
 
 		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
 
-		email.sendKeys(super.getpatientvalidemail());
+		email.sendKeys(DashboardInfoData.patientvalidemail);
 		WebElement note = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[5]//div[1]//div[1]//div[2]//div[1]//div[1]//input[1]")));
-		note.sendKeys(super.getpatientnote3());
+		note.sendKeys(DashboardInfoData.patientnote3);
 		if(email.getAttribute("value").startsWith("@")){
 			WebElement invalidMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'E-mail must be valid')]")));
 			System.out.println(invalidMsg.getText());
