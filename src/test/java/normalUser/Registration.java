@@ -34,7 +34,7 @@ import org.testng.annotations.Test;
 import normalUserInputData.RegistrationInfoData;
 
 
-public class Registration extends RegistrationInfoData {
+public class Registration  {
 
 	//Opening browser with the given URL and navigate to Registration Page
 
@@ -136,16 +136,16 @@ public class Registration extends RegistrationInfoData {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
 		WebElement firstName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@data-app='true']/div/div/div/div/div/form[@novalidate='novalidate']/div[1]/div[1]/div[1]/div[1]/input[1]")));
-		firstName.sendKeys(super.getfirstName());
+		firstName.sendKeys(RegistrationInfoData.firstName);
 
 		WebElement LastName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body//div[@data-app='true']//div//div//div//div[2]//div[1]//div[1]//div[1]//input[1]")));
-		LastName.sendKeys(super.getlastName());
+		LastName.sendKeys(RegistrationInfoData.lastName);
 
 		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[3]//div[1]//div[1]//div[1]//input[1]")));
-		email.sendKeys(super.getemail());
+		email.sendKeys(RegistrationInfoData.email);
 
 		WebElement verifiedemail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[4]//div[1]//div[1]//div[1]//input[1]")));
-		verifiedemail.sendKeys(super.getverifiedemail());
+		verifiedemail.sendKeys(RegistrationInfoData.verifiedemail);
 
 		WebElement checkmark = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-input theme--light v-input--selection-controls v-input--radio-group v-input--radio-group--column']//div[2]//div[1]//div[1]")));
 		checkmark.click();
@@ -174,16 +174,16 @@ public class Registration extends RegistrationInfoData {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
 		WebElement firstName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@data-app='true']/div/div/div/div/div/form[@novalidate='novalidate']/div[1]/div[1]/div[1]/div[1]/input[1]")));
-		firstName.sendKeys(super.getinvalidfirstName());
+		firstName.sendKeys(RegistrationInfoData.invalidfirstName);
 
 		WebElement LastName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body//div[@data-app='true']//div//div//div//div[2]//div[1]//div[1]//div[1]//input[1]")));
-		LastName.sendKeys(super.getlastName());
+		LastName.sendKeys(RegistrationInfoData.lastName);
 
 		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[3]//div[1]//div[1]//div[1]//input[1]")));
-		email.sendKeys(super.getemail());
+		email.sendKeys(RegistrationInfoData.email);
 
 		WebElement verifiedemail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[4]//div[1]//div[1]//div[1]//input[1]")));
-		verifiedemail.sendKeys(super.getverifiedemail());
+		verifiedemail.sendKeys(RegistrationInfoData.verifiedemail);
 
 		WebElement checkmark = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-input theme--light v-input--selection-controls v-input--radio-group v-input--radio-group--column']//div[2]//div[1]//div[1]")));
 		checkmark.click();
@@ -242,16 +242,16 @@ public class Registration extends RegistrationInfoData {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
 		WebElement firstName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@data-app='true']/div/div/div/div/div/form[@novalidate='novalidate']/div[1]/div[1]/div[1]/div[1]/input[1]")));
-		firstName.sendKeys(super.getfirstName());
+		firstName.sendKeys(RegistrationInfoData.firstName);
 
 		WebElement LastName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body//div[@data-app='true']//div//div//div//div[2]//div[1]//div[1]//div[1]//input[1]")));
-		LastName.sendKeys(super.getinvalidlastName());
+		LastName.sendKeys(RegistrationInfoData.invalidlastName);
 
 		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[3]//div[1]//div[1]//div[1]//input[1]")));
-		email.sendKeys(super.getemail());
+		email.sendKeys(RegistrationInfoData.email);
 
 		WebElement verifiedemail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[4]//div[1]//div[1]//div[1]//input[1]")));
-		verifiedemail.sendKeys(super.getverifiedemail());
+		verifiedemail.sendKeys(RegistrationInfoData.verifiedemail);
 
 		WebElement checkmark = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-input theme--light v-input--selection-controls v-input--radio-group v-input--radio-group--column']//div[2]//div[1]//div[1]")));
 		checkmark.click();
@@ -312,16 +312,16 @@ public class Registration extends RegistrationInfoData {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
 		WebElement firstName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[@data-app='true']/div/div/div/div/div/form[@novalidate='novalidate']/div[1]/div[1]/div[1]/div[1]/input[1]")));
-		firstName.sendKeys(super.getfirstName());
+		firstName.sendKeys(RegistrationInfoData.firstName);
 
 		WebElement LastName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body//div[@data-app='true']//div//div//div//div[2]//div[1]//div[1]//div[1]//input[1]")));
-		LastName.sendKeys(super.getlastName());
+		LastName.sendKeys(RegistrationInfoData.lastName);
 
 		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[3]//div[1]//div[1]//div[1]//input[1]")));
-		email.sendKeys(super.getinvalidemail());
+		email.sendKeys(RegistrationInfoData.invalidemail);
 
 		WebElement verifiedemail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[4]//div[1]//div[1]//div[1]//input[1]")));
-		verifiedemail.sendKeys(super.getverifiedemail());
+		verifiedemail.sendKeys(RegistrationInfoData.verifiedemail);
 
 		WebElement checkmark = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-input theme--light v-input--selection-controls v-input--radio-group v-input--radio-group--column']//div[2]//div[1]//div[1]")));
 		checkmark.click();
