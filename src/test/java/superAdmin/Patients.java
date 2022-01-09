@@ -140,8 +140,8 @@ public class Patients extends PatientsInfoData{
 		WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
 		WebElement login = driver.findElement(By.xpath("//form[@novalidate='novalidate']//button[1]"));
 
-		String user = super.getUser();
-		String pass = super.getPass();
+		String user = PatientsInfoData.user;
+		String pass = PatientsInfoData.pass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -181,7 +181,7 @@ public class Patients extends PatientsInfoData{
 		checkPatientList();
 
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		String searchLocation = super.getsearchLocation();
+		String searchLocation = PatientsInfoData.searchLocation;
 		WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-text-field__slot']//input[@type='text']")));
 		search.sendKeys(searchLocation);
 		Thread.sleep(3000);
