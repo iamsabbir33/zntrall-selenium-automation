@@ -25,7 +25,7 @@ import org.testng.annotations.Test;
 
 import normalUserInputData.LoginTestInfoData;
 
-public class LoginTest extends LoginTestInfoData {
+public class LoginTest  {
 
 	public static String env = "Test";
 	public static String testSuiteName = "Test Suit 2 -- Login";
@@ -132,8 +132,8 @@ public class LoginTest extends LoginTestInfoData {
 		WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password']")));
 		WebElement login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@novalidate='novalidate']//button[1]")));
 
-		String user = super.getUser();
-		String pass = super.getPass();
+		String user = LoginTestInfoData.user;
+		String pass = LoginTestInfoData.pass;
 
 		username.sendKeys(user);
 		password.sendKeys(pass);
@@ -159,8 +159,8 @@ public class LoginTest extends LoginTestInfoData {
 		WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password']")));
 		WebElement login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@novalidate='novalidate']//button[1]")));
 
-		username.sendKeys(super.getinvaliduser());
-		password.sendKeys(super.getPass());
+		username.sendKeys(LoginTestInfoData.invaliduser);
+		password.sendKeys(LoginTestInfoData.pass);
 
 		try {
 			login.click();
@@ -196,8 +196,8 @@ public class LoginTest extends LoginTestInfoData {
 
 		WebElement checkbox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='v-input--selection-controls__ripple']")));
 
-		username.sendKeys(super.getUser());
-		password.sendKeys(super.getinvalidpass());
+		username.sendKeys(LoginTestInfoData.user);
+		password.sendKeys(LoginTestInfoData.invalidpass);
 
 		checkbox.click();
 
@@ -232,8 +232,8 @@ public class LoginTest extends LoginTestInfoData {
 		WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password']")));
 		WebElement login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@novalidate='novalidate']//button[1]")));
 
-		username.sendKeys(super.getinvaliduser());
-		password.sendKeys(super.getinvalidpass());
+		username.sendKeys(LoginTestInfoData.invaliduser);
+		password.sendKeys(LoginTestInfoData.invalidpass);
 
 		login.isEnabled();
 
